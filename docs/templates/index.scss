@@ -243,6 +243,11 @@ position: static;
 visibility: visible;
 padding-left: 0;
 }
+.docs-arrow{
+    &::after{
+        display: none;
+    }
+}
 }
 @media screen and (max-width: 425px){
     .landing-content{
@@ -253,7 +258,7 @@ padding-left: 0;
     }
     ///////////////////////////////////////Sections sub menu
     .sections-ul{
-        column-count: 1;
+        column-count: 2;
         
     }
 }

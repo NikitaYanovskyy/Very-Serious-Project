@@ -139,6 +139,7 @@ a {
 }
 
 .menu-bar nav .logo {
+  display: block;
   height: 50px;
   width: 120px;
   margin-right: 3rem;
@@ -174,6 +175,7 @@ a {
   color: rgba(255, 255, 255, 0.85);
   display: block;
   padding: 20px 1.5rem;
+  font-size: 0.8rem;
 }
 
 .menu-bar nav .menu li:hover .sub-menu-wrapper {
@@ -182,6 +184,7 @@ a {
 }
 
 .menu-bar nav .menu li a {
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -522,6 +525,45 @@ a {
   color: #8492A6 !important;
 }
 
+.docs-arrow {
+  position: relative;
+}
+
+.docs-arrow::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* Prefixes... */
+  top: -5px;
+  right: 25px;
+}
+
+.sub-menu-align-left {
+  left: -300px !important;
+}
+
+.docs-ul {
+  -webkit-column-count: 2;
+          column-count: 2;
+  padding: 2rem 1rem;
+  background-color: #f8f8f8;
+}
+
+.docs-ul p a {
+  display: block;
+  width: 100%;
+  padding: 10px 0 !important;
+  color: #000 !important;
+}
+
+.docs-ul p a:hover {
+  color: #8492A6 !important;
+}
+
 @media screen and (max-width: 1200px) {
   .landing-high-bar {
     padding: 20px 7vmin;
@@ -721,6 +763,9 @@ a {
     width: auto;
     margin: 0 1.5rem;
   }
+  .docs-arrow::after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -731,8 +776,8 @@ a {
     margin: 0 5vmin;
   }
   .sections-ul {
-    -webkit-column-count: 1;
-            column-count: 1;
+    -webkit-column-count: 2;
+            column-count: 2;
   }
 }
 /*# sourceMappingURL=index.css.map */
