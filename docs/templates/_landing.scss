@@ -47,7 +47,7 @@
             color: #fff;
         }
         &:last-of-type{
-            margin: 0 -0.3rem 0 0.6rem;
+            margin: 0 0 0 0.6rem;
         }
     }
 }
@@ -321,4 +321,45 @@
             }
         }
     }  
+}
+///////////////////////////////////////////////////////////////////////////About sub menu
+
+.sections-sub-menu-li{
+    width: 500px;
+    padding: 2rem;
+}
+.sections-ul{
+    column-count: 3;
+    padding: 2rem 1rem;
+    background-color: rgb(248, 248, 248);
+    p{
+        a{
+            display: block;
+            width: 100%;
+            padding: 10px 0 !important;
+            color: #000 !important;
+            &:hover{
+                color: $SubMenuP !important;
+            }
+        }
+    }
+}
+.sections-bottom-block{
+    padding: 1rem 0;
+    span{
+        font-weight: bold;
+        display: block;
+        width: fit-content;
+        background-color: #d7f0e5;
+        color: #36B37E;
+        font-size: 0.7rem;
+        padding: 5px;
+        border-radius: 4px;
+        margin: 0 0 0.5rem 1rem;
+    }
+    p{
+        font-size: 0.8rem;
+        margin: 0 1rem;
+        color: $SubMenuP !important;
+    }
 }

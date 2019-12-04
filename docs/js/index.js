@@ -34,7 +34,7 @@ $(document).ready(()=>{
             })
 //Display none
             $('.landing-content').css({
-                'display': 'block'
+                'display': 'flex'
             })
             $('.menu').css({
                 'display': 'none'
