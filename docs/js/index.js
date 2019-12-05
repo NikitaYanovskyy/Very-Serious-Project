@@ -52,4 +52,31 @@ $(document).ready(()=>{
         }
         
     })
+///////////////////////////////////////////////////////////Mobile menu logic
+
+$.each($('.mobile-sub-btn'), function(){
+    $(this).find('.mobile-flex').click(()=>{
+        if($(this).find('.sub-menu-wrapper').hasClass('mobile-menu-toggle')){
+            $(this).find('.sub-menu-wrapper').removeClass('mobile-menu-toggle');
+        }else{
+            $.each($('.sub-menu-wrapper'),function(){
+                $(this).removeClass('mobile-menu-toggle');
+            })
+            $(this).find('.sub-menu-wrapper').addClass('mobile-menu-toggle');
+        }    
+    }) 
+})
+
+$.each($('.sub-and-sub-sub'), function(){
+    $(this).find('.sub-menu-li').click(()=>{
+        if($(this).find('.sub-sub-menu').hasClass('mobile-menu-toggle')){
+            $(this).find('.sub-sub-menu').removeClass('mobile-menu-toggle');
+        }else{
+            $.each($('.sub-sub-menu'),function(){
+                $(this).removeClass('mobile-menu-toggle');
+            })
+            $(this).find('.sub-sub-menu').addClass('mobile-menu-toggle');
+        }
+    })
+})
 })
