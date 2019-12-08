@@ -1,0 +1,152 @@
+.section5-wrapper{
+    position: relative;
+    padding: 100px 0 300px 0;
+    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%) !important;
+    h1,p{
+        color: #fff;
+    }
+    h1{font-weight: normal;
+        font-size: 2.2rem;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        border-radius: 25rem;
+        padding: 12px 28px;
+        font-weight: bold;
+        i{
+            margin-right: 10px;
+        }
+        &:first-of-type{
+            background-color: #273444;
+            margin-right: 20px;
+            p,i{
+                color: #fff !important;
+            }
+        }
+        &:last-of-type{
+            background-color: #fff;
+            p,i{
+                color: #000 !important;
+            }
+        }
+    }
+}
+.section-5-text{
+    margin: 2rem auto;
+    width: 65%;
+}
+.section-5-buttons{
+    display: flex;
+    justify-content: center;
+}
+/////////////////////////////////////Animation & Absolute sfuff
+.section5-down-wrapper{
+    position: absolute;
+    width: 138px;
+    height: 35px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
+.section5-down{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.tongue{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+.section5-down-btn{
+    position: absolute;
+    top: 10px;
+    left: 46%;
+    transform: translate(-45%, 0) rotate(180deg) ;
+    color: #000;
+    animation: downBTN 4s infinite ease-in-out;
+}
+@keyframes downBTN{
+    0% {
+        transform: translate(0, 5px) rotate(180deg);
+    }
+    50% {
+        transform: translate(0, -5px) rotate(180deg);
+
+    }
+    100% {        
+        transform: translate(0, 5px) rotate(180deg);
+    }
+}
+
+/////////////////////////////////////////////////////////////////Absolute icons
+.section5-absolute-icon{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1.2rem;
+    box-shadow: 0 30px 40px 0 rgba(31, 45, 61, 0.1);
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    &:nth-of-type(1){
+        width: 130px;
+        height: 130px;
+        left: 5%;
+        bottom: 30px;
+        animation: absoluteicon 4s infinite 0.3s ease-in-out;
+    }
+    &:nth-of-type(2){
+        width: 160px;
+        height: 160px;
+        left: 23%;
+        bottom: -80px;
+        animation: absoluteicon 4s infinite 0.6s ease-in-out;
+    }
+    &:nth-of-type(3){
+        width: 80px;
+        height: 80px;
+        left: 40%;
+        bottom: 80px;
+        animation: absoluteicon 2.7s infinite 0.1s ease-in-out;
+    }
+    &:nth-of-type(4){
+        width: 150px;
+        height: 150px;
+        left: 55%;
+        bottom: -80px;
+        animation: absoluteicon 3s infinite ease-in-out;
+    }
+    &:nth-of-type(5){
+        width: 110px;
+        height: 110px;
+        left: 70%;
+        bottom: 100px;
+        animation: absoluteicon 2.5s infinite 0.5s ease-in-out;
+    }
+    &:nth-of-type(6){
+        width: 90px;
+        height: 90px;
+        left: 88%;
+        bottom: 30px;
+        animation: absoluteicon 2s infinite ease-in-out;
+    }
+}
+@keyframes absoluteicon{
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -15px);
+
+    }
+    100% {        
+        transform: translate(0, 0);
+    }
+}

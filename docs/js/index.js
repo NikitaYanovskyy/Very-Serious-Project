@@ -1,4 +1,28 @@
 $(document).ready(()=>{
+    //////////////////////////////////////////Language button
+    var LabguagesBTNCheck = false;
+    $('.languages').click(()=>{
+        if(LabguagesBTNCheck == false){
+            $('.language-pop-up').css({'display': 'block'});
+            LabguagesBTNCheck = true;
+        }else{
+            $('.language-pop-up').css({'display': 'none'});
+            LabguagesBTNCheck = false;
+        }
+    })
+    //////////////////////////////////////////Purchase btn
+    $('.purchase-button').mouseover(()=>{
+        $('.purchase-pop-up').css({
+            'opacity': '1',
+            'visibility': 'visible'
+        })
+    })
+    $('.purchase-button').mouseout(()=>{
+        $('.purchase-pop-up').css({
+            'opacity': '0',
+            'visibility': 'hidden'
+        })
+    })
     //////////////////////////////////////////Menu button logic
     var menuBTNCheck = false;
     $('.burger-btn').click(()=>{
@@ -10,6 +34,12 @@ $(document).ready(()=>{
             })
 //Display none
             $('.landing-content').css({
+                'display': 'none'
+            })
+            $('main').css({
+                'display': 'none'  
+            })
+            $('.landing-particles').css({
                 'display': 'none'
             })
             $('.menu').delay(100).queue(function(next){
@@ -35,6 +65,12 @@ $(document).ready(()=>{
 //Display none
             $('.landing-content').css({
                 'display': 'flex'
+            })
+            $('main').css({
+                'display': 'block'  
+            })
+            $('.landing-particles').css({
+                'display': 'block'
             })
             $('.menu').css({
                 'display': 'none'
@@ -79,4 +115,38 @@ $.each($('.sub-and-sub-sub'), function(){
         }
     })
 })
+})
+///////////////////////////////////////////////////////////Section3 button
+$('.flex-btn').mouseover(()=>{
+    $('.flex-device-line').animate({
+        width: '100%'
+    }, 100)
+    $('.flex-device-line').animate({
+        width: '90%'
+    }, 100)
+})
+
+$('.flex-btn').mouseout(()=>{
+    $('.flex-device-line').animate({
+        width: '75%'
+    }, 100)
+    $('.flex-device-line').animate({
+        width: '85%'
+    }, 100)
+})
+///////////////////////////////////////////////////////////Section5 down button
+$('.section5-down-wrapper').click(()=>{
+    $('body,html').animate({
+        scrollTop: $('.section5-wrapper').offset().top
+    }, 1000)
+})
+///////////////////////////////////////////////////////////Carousel
+$('#carousel').owlCarousel({
+    margin: 50,
+    dots: true,
+    responsive:{
+        0: {items: 1},
+        600:{items: 2},
+        1200: {items:3}
+    }
 })

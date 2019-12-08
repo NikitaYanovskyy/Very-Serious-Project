@@ -1,12 +1,38 @@
 .landing{
+    position: relative;
     overflow: hidden;
-    background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
+    background: #FAFBFE;
     a,p{
         transition: color 0.2s ease-in-out;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 130%;
+        height: 150%;
+        top: -620px;
+        left: -25px;
+        background: linear-gradient(50deg, #6e00ff 0, #bb00ff 100%);
+        transform: rotate(-7deg);
+        border-bottom-left-radius: 2rem;
+}
+
+}
+.landing-particles{
+    position: absolute;
+    top: -60px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    svg{
+        height: 100%;
+        width: 100%;
     }
 }
 ///////////////////////////////////////////////////////////////////////High bar
 .landing-high-bar{
+    position: relative;
+    z-index: 3;
     padding: 20px 15vmin;
     display: flex;
     justify-content: space-between;
@@ -22,9 +48,12 @@
     }
 }
 .language-side{
+    position: relative;
     display: flex;
     align-items: center;
     .languages{
+        position: relative;
+        cursor: pointer;
         display: flex;
         align-items: center;
         margin-left: 1.5rem;
@@ -32,9 +61,38 @@
         &:hover p{
             color: #fff;
         }
+        p::selection{
+            background: transparent;
+        }
         span{
             display: none;
             color: #fff;
+        }
+        .language-pop-up{
+            cursor: auto;
+            display: none;
+            width: 180px;
+            padding: 0.5rem 0;
+            border-radius: 0.2rem;
+            position: absolute;
+            bottom: -8.1rem;
+            background-color: #fff;
+            p{
+                width: 100%;
+                cursor: pointer;
+                color: $SubMenuP;
+                &:hover{
+                    color: #000;
+                }
+            }
+            .language-pop-element{
+                padding: 0.3rem 1rem;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 0.7rem;
+                }
+            }
         }
     }
 }
@@ -52,9 +110,6 @@
             margin: 0 0 0 0.6rem;
         }
     }
-}
-.overview, .whats-new{
-    padding: 20px 1.5rem;
 }
 ///////////////////////////////////////////////////////////////////////Menu bar
 .menu-bar{
@@ -106,8 +161,12 @@
                 }
                 //////////////////////////Other stuff
                 a{
+                    padding: 20px 24px;
                     font-size: 0.8rem;
                     color: $LinkColor;
+                    &:first-of-type{
+                        padding: 20px 24px 20px 0;
+                    }
                 }
                 &:nth-of-type(4){
                     margin-left: auto;
@@ -117,12 +176,45 @@
                 }
             }
             .purchase-button{
+                i{
+                    margin-right: 0.3rem;
+                }
+                transition: background-color 0.2s ease-in-out;
+                cursor: pointer;
                 background-color: #fff;
                 color: #000 !important;
                 padding: 8px 20px;
                 border-radius: 50rem;
                 margin-left: 1rem;
                 margin: 0;
+                .purchase-pop-up{
+                    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+                    position: absolute;
+                    opacity: 0;
+                    visibility: hidden;
+                    width: 163px;
+                    padding: 5px;
+                    color: #fff;
+                    background-color: #000;
+                    border-radius: 4px;
+                    left: -173px;
+                    top: 4px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        width: 15px;
+                        height: 15px;
+                        background: #000;
+                        transform: rotate(45deg); /* Prefixes... */
+                        box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);  
+                        top: 6px;
+                        right: -5px;
+                    }
+                }
+                &:hover{
+                    background-color: rgb(231, 231, 233); 
+                }               
             }
         }
     }
@@ -131,7 +223,8 @@
 .landing-content{
     position: relative;
     display: flex;
-    padding: 70px 0;
+    justify-content: space-between;
+    padding: 70px 0 250px 0;
 }
 .landing-content-text{
     flex: 1;
