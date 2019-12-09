@@ -33,11 +33,13 @@ $(document).ready(()=>{
                 'background-color': '#273444'
             })
 //Display none
-            $('.landing-content').css({
-                'display': 'none'
+            $('body').css({
+                'overflow': 'hidden'
             })
-            $('main').css({
-                'display': 'none'  
+
+            $('.absolute-icons').css({
+            'visibility': 'hidden',
+            'opacity': '0'
             })
             $('.landing-particles').css({
                 'display': 'none'
@@ -57,14 +59,25 @@ $(document).ready(()=>{
         }
         
         else{
+            $('body').css({
+                'overflow': 'unset'
+            })
             $('.mobile-menu-wrapper').css({
-                'transition': 'none',
-                'min-height': 'unset',
-                'background-color': 'transparent'
+                'background-color': 'transparent',
+            })
+            $('.mobile-menu-wrapper').delay(200).queue(function(next){
+                $(this).css({
+                    'min-height': 'unset'  
+                })
+                next();
             })
 //Display none
             $('.landing-content').css({
                 'display': 'flex'
+            })
+            $('.absolute-icons').css({
+                'visibility': 'visible',
+                'opacity': '1'
             })
             $('main').css({
                 'display': 'block'  

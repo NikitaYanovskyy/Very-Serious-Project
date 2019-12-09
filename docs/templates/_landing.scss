@@ -1,3 +1,8 @@
+.mobile-menu-wrapper{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
 .landing{
     position: relative;
     overflow: hidden;
@@ -16,7 +21,6 @@
         transform: rotate(-7deg);
         border-bottom-left-radius: 2rem;
 }
-
 }
 .landing-particles{
     position: absolute;
@@ -224,7 +228,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 70px 0 250px 0;
+    padding: 192px 0 250px 0;
 }
 .landing-content-text{
     flex: 1;

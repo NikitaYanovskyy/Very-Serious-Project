@@ -42,6 +42,12 @@ a {
           mask-image: url("../images/navigation media/menu-arrow.svg");
 }
 
+.mobile-menu-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
 .landing {
   position: relative;
   overflow: hidden;
@@ -349,7 +355,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 70px 0 250px 0;
+  padding: 192px 0 250px 0;
 }
 
 .landing-content-text {
@@ -1507,6 +1513,8 @@ body {
 }
 
 .absolute-icons {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   position: fixed;
   z-index: 3;
   left: 1rem;
@@ -1518,6 +1526,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   bottom: 1rem;
+  visibility: visible;
+  opacity: 1;
 }
 
 .absolute-icons a {
@@ -1681,7 +1691,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 100px 0;
+    padding: 180px 0 100px 0;
   }
   .landing-content-text {
     width: 100%;
@@ -1738,6 +1748,8 @@ body {
             align-items: flex-start;
   }
   .menu-bar nav .logo-wrapper {
+    position: relative;
+    z-index: 100;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2011,10 +2023,10 @@ body {
 
 @media screen and (max-width: 500px) {
   .landing-particles {
-    display: none;
+    display: none !important;
   }
   .landing-content {
-    padding-top: 50px;
+    padding-top: 100px 0 50px 0;
   }
   .container {
     margin: 0 5vmin;
